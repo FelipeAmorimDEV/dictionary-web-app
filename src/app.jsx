@@ -7,7 +7,6 @@ const url = 'https://api.dictionaryapi.dev/api/v2/entries/en'
 const App = () => {
   const [wordDefinition, setWordDefinition] = useState([])
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState("")
   const [search, setSearch] = useState("")
 
   const formRef = useRef(null)
@@ -22,8 +21,6 @@ const App = () => {
       .catch(error => alert(error.message))
       .finally(() => setLoading(false))
   } , [])
-
-
 
   const handleWordSearch = (e) => {
     e.preventDefault()
@@ -56,11 +53,9 @@ const App = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)} 
             placeholder="Search for any word..." 
-            name="search" 
-            style={error ? {border: '1px solid #FF5252'} : null}
+            name="search"
           />
         </label>
-        <p className="error-feedback heading-s-mobile">{error}</p>
       </form>
 
       {loading &&
@@ -72,7 +67,7 @@ const App = () => {
         <div className="error-screen">
           <span className="emoji">😥</span>
           <span className="heading-s not-found">No Definitions Found</span>
-          <p className="body-m-mobile">Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at later time or head to the web instead.</p>
+          <p className="body-m-mobile">Sorry pal, we could not find definitions for the word you were looking for. You can try the search again at later time or head to the web instead.</p>
         </div>
       )}
       {wordDefinition.length > 0 && !loading && (
@@ -129,10 +124,7 @@ const App = () => {
                 <a key={index} className="body-s-mobile" href={source}>{source}<img src="link-icon.svg" /></a>)
               }
             </footer>
-
           </main>
-
-
         </>
       )}
     </div>
