@@ -1,0 +1,58 @@
+:root {
+  --gray-900: #050505;
+  --gray-800: #1F1F1F;
+  --gray-700: #2D2D2D;
+  --gray-600: #3A3A3A;
+  --gray-400: #757575;
+  --gray-300: #E9E9E9;
+  --gray-100: #F4F4F4;
+
+  --white: #FFFFFF;
+  --primary: #A445ED;
+  --error: #FF5252;
+}
+
+.heading-l {
+  font-family: 'Inter';
+  font-size: 4rem;
+  line-height: 1.20;
+  font-weight: bold;
+}
+
+.heading-m {
+  font-family: 'Inter';
+  font-size: 1.5rem;
+  line-height: 1.20;
+  font-weight: 400;
+}
+
+.heading-s {
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  line-height: 1.20;
+  font-weight: 400;
+}
+
+.body-m {
+  font-family: 'Inter';
+  font-size: 1.125rem;
+  line-height: 1.33;
+  font-weight: 400;
+}
+
+.body-s {
+  font-family: 'Inter';
+  font-size: 0.875rem;
+  line-height: 1.21;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
